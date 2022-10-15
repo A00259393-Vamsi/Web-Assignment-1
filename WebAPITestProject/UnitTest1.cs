@@ -7,6 +7,9 @@ namespace WebAPITestProject
     {
         // Addition Tests
 
+        /*
+         * Below method is used to verify add operation when first number is zero
+         */
         [TestMethod]
         public void TestAddMethodWithZeroAsFirstNumber()
         {
@@ -15,6 +18,9 @@ namespace WebAPITestProject
             Assert.AreEqual(20, additionresult);
         }
 
+        /*
+         * Below method is used to verify add operation when second number is zero
+         */
         [TestMethod]
         public void TestAddMethodWithZeroAsSecondNumber()
         {
@@ -23,6 +29,9 @@ namespace WebAPITestProject
             Assert.AreEqual(10, additionresult);
         }
 
+        /*
+         * Below method is used to verify add operation when both numbers are zero
+         */
         [TestMethod]
         public void TestAddMethodWithZeroAsFirstNumberAndSecondNumber()
         {
@@ -31,6 +40,9 @@ namespace WebAPITestProject
             Assert.AreEqual(0, additionresult);
         }
 
+        /*
+         * Below method is used to verify add operation when both numbers are positive
+         */
         [TestMethod]
         public void TestAddMethodWithPositiveNumbers()
         {
@@ -39,6 +51,9 @@ namespace WebAPITestProject
             Assert.AreEqual(40, additionresult);
         }
 
+        /*
+         * Below method is used to verify add operation when both numbers are negative
+         */
         [TestMethod]
         public void TestAddMethodWithBothNegativeNumbers()
         {
@@ -47,6 +62,10 @@ namespace WebAPITestProject
             Assert.AreEqual(-30, additionresult);
         }
 
+        /*
+         * Below method is used to verify add operation when first number is positive
+         * and second number is negative
+         */
         [TestMethod]
         public void TestAddMethodWithFirstNumberPositiveAndSecondNumberNegative()
         {
@@ -55,6 +74,10 @@ namespace WebAPITestProject
             Assert.AreEqual(0, additionresult);
         }
 
+        /*
+         * Below method is used to verify add operation when first number is negative
+         * and second number is positive
+         */
         [TestMethod]
         public void TestAddMethodWithFirstNumberNegativeAndSecondNumberPositive()
         {
@@ -62,6 +85,11 @@ namespace WebAPITestProject
             additionresult = Operations.Add(-20, 20);
             Assert.AreEqual(0, additionresult);
         }
+
+        /*
+         * Below method is used to verify add operation when positive number 
+         * greater than negative number
+         */
         [TestMethod]
         public void TestAddMethodWithPositiveNumberGreaterThanNegativeNumber()
         {
@@ -70,8 +98,23 @@ namespace WebAPITestProject
             Assert.AreEqual(10, additionresult);
         }
 
+        /*
+         * Below method is used to verify add operation when negative number 
+         * greater than positive number
+         */
+        [TestMethod]
+        public void TestAddMethodWithNegativeNumberGreaterThanPositiveNumber()
+        {
+            double additionresult;
+            additionresult = Operations.Add(-30, 20);
+            Assert.AreEqual(-10, additionresult);
+        }
+
         // Subtraction Tests
 
+        /*
+         * Below method is used to verify subtract operation when first number is zero
+         */
         [TestMethod]
         public void TestSubtractMethodWithZeroAsFirstNumber()
         {
@@ -80,64 +123,106 @@ namespace WebAPITestProject
             Assert.AreEqual(-20, subResult);
         }
 
+        /*
+         * Below method is used to verify subtract operation when second number is zero
+         */
         [TestMethod]
         public void TestSubtractMethodWithZeroAsSecondNumber()
         {
             double subResult;
-            subResult = Operations.Add(10, 0);
+            subResult = Operations.Subtract(10, 0);
             Assert.AreEqual(10, subResult);
         }
 
+        /*
+         * Below method is used to verify subtract operation when first number
+         * and second number are zero
+         */
         [TestMethod]
         public void TestSubtractMethodWithZeroAsFirstNumberAndSecondNumber()
         {
             double subResult;
-            subResult = Operations.Add(0, 0);
+            subResult = Operations.Subtract(0, 0);
             Assert.AreEqual(0, subResult);
         }
 
+        /*
+         * Below method is used to verify subtract operation 
+         * when both numbers are positive
+         */
         [TestMethod]
         public void TestSubtractMethodWithPositiveNumbers()
         {
             double subResult;
-            subResult = Operations.Add(20, 20);
+            subResult = Operations.Subtract(20, 20);
             Assert.AreEqual(40, subResult);
         }
 
+        /*
+         * Below method is used to verify subtract operation 
+         * when both numbers are negative
+         */
         [TestMethod]
         public void TestSubtractMethodWithBothNegativeNumbers()
         {
             double subResult;
-            subResult = Operations.Add(-10, -20);
+            subResult = Operations.Subtract(-10, -20);
             Assert.AreEqual(10, subResult);
         }
 
+        /*
+         * Below method is used to verify subtract operation 
+         * when first number is positive and second is negative
+         */
         [TestMethod]
         public void TestSubtractMethodWithFirstNumberPositiveAndSecondNumberNegative()
         {
             double subResult;
-            subResult = Operations.Add(20, -20);
+            subResult = Operations.Subtract(20, -20);
             Assert.AreEqual(40, subResult);
         }
 
+        /*
+         * Below method is used to verify subtract operation 
+         * when both first number is negative and second is positive
+         */
         [TestMethod]
         public void TestSubtractMethodWithFirstNumberNegativeAndSecondNumberPositive()
         {
             double subResult;
-            subResult = Operations.Add(-20, 20);
+            subResult = Operations.Subtract(-20, 20);
             Assert.AreEqual(-40, subResult);
         }
+
+        /*
+         * Below method is used to verify subtract operation 
+         * when positive number greater than negative
+         */
         [TestMethod]
         public void TestSubtractMethodWithPositiveNumberGreaterThanNegativeNumber()
         {
             double subResult;
-            subResult = Operations.Add(30, -20);
+            subResult = Operations.Subtract(30, -20);
             Assert.AreEqual(50, subResult);
+        }
+
+        /*
+         * Below method is used to verify subtract operation 
+         * when negative number greater than positive
+         */
+        [TestMethod]
+        public void TestSubtractMethodWithNegativeNumberGreaterThanPositiveNumber()
+        {
+            double subResult;
+            subResult = Operations.Subtract(-30, 20);
+            Assert.AreEqual(-10, subResult);
         }
 
         // Multiply Tests
 
-
+        /*
+         * Below method is used to verify multiply operation when first number is zero
+         */
         [TestMethod]
         public void TestMultiplyMethodWithZeroAsFirstNumber()
         {
@@ -146,6 +231,9 @@ namespace WebAPITestProject
             Assert.AreEqual(0, multiplyResult);
         }
 
+        /*
+         * Below method is used to verify multiply operation when second number is zero
+         */
         [TestMethod]
         public void TestMultiplyMethodWithZeroAsSecondNumber()
         {
@@ -154,6 +242,9 @@ namespace WebAPITestProject
             Assert.AreEqual(0, multiplyResult);
         }
 
+        /*
+         * Below method is used to verify multiply operation when both numbers are zero
+         */
         [TestMethod]
         public void TestMultiplyMethodWithZeroAsFirstNumberAndSecondNumber()
         {
@@ -162,6 +253,9 @@ namespace WebAPITestProject
             Assert.AreEqual(0, multiplyResult);
         }
 
+        /*
+         * Below method is used to verify multiply operation when both numbers are positive
+         */
         [TestMethod]
         public void TestMultiplyMethodWithPositiveNumbers()
         {
@@ -170,6 +264,9 @@ namespace WebAPITestProject
             Assert.AreEqual(400, multiplyResult);
         }
 
+        /*
+         * Below method is used to verify multiply operation when both number negative
+         */
         [TestMethod]
         public void TestMultiplyMethodWithBothNegativeNumbers()
         {
@@ -178,6 +275,10 @@ namespace WebAPITestProject
             Assert.AreEqual(200, multiplyResult);
         }
 
+        /*
+         * Below method is used to verify multiply operation when first number positive
+         * and second one negative
+         */
         [TestMethod]
         public void TestMultiplyMethodWithFirstNumberPositiveAndSecondNumberNegative()
         {
@@ -186,6 +287,10 @@ namespace WebAPITestProject
             Assert.AreEqual(-400, multiplyResult);
         }
 
+        /*
+         * Below method is used to verify multiply operation when first number negative
+         * and second one positive
+         */
         [TestMethod]
         public void TestMultiplyMethodWithFirstNumberNegativeAndSecondNumberPositive()
         {
@@ -193,6 +298,23 @@ namespace WebAPITestProject
             multiplyResult = Operations.Multiply(-20, 20);
             Assert.AreEqual(-400, multiplyResult);
         }
+
+        /*
+         * Below method is used to verify mulitply operation when negative number
+         * greater than positive number
+         */
+        [TestMethod]
+        public void TestMultiplyMethodWithNegativeNumberGreaterThanPositiveNumber()
+        {
+            double multiplyResult;
+            multiplyResult = Operations.Multiply(-40, 20);
+            Assert.AreEqual(-800, multiplyResult);
+        }
+
+        /*
+         * Below method is used to verify multiply operation when positive number
+         * greater than negative number
+         */
         [TestMethod]
         public void TestMultiplyMethodWithPositiveNumberGreaterThanNegativeNumber()
         {
@@ -203,7 +325,9 @@ namespace WebAPITestProject
 
         // Division tests
 
-
+        /*
+         * Below method is used to verify divide operation when first number is zero
+         */
         [TestMethod]
         public void TestDivisionMethodWithZeroAsFirstNumber()
         {
@@ -212,6 +336,9 @@ namespace WebAPITestProject
             Assert.AreEqual(0, divisionResult);
         }
 
+        /*
+         * Below method is used to verify divide operation when second number is zero
+         */
         [TestMethod]
         public void TestDivisionMethodWithZeroAsSecondNumber()
         {
@@ -220,6 +347,9 @@ namespace WebAPITestProject
             Assert.AreEqual(-1, divisionResult);
         }
 
+        /*
+         * Below method is used to verify divide operation when both number are zero
+         */
         [TestMethod]
         public void TestDivisionMethodWithZeroAsFirstNumberAndSecondNumber()
         {
@@ -228,6 +358,9 @@ namespace WebAPITestProject
             Assert.AreEqual(-1, divisionResult);
         }
 
+        /*
+         * Below method is used to verify divide operation when both are positive numbers
+         */
         [TestMethod]
         public void TestDivisionMethodWithPositiveNumbers()
         {
@@ -236,6 +369,9 @@ namespace WebAPITestProject
             Assert.AreEqual(1, divisionResult);
         }
 
+        /*
+         * Below method is used to verify divide operation when both numbers are negative
+         */
         [TestMethod]
         public void TestDivisionMethodWithBothNegativeNumbers()
         {
@@ -244,6 +380,10 @@ namespace WebAPITestProject
             Assert.AreEqual(1, divisionResult);
         }
 
+        /*
+         * Below method is used to verify divide operation when first number is positive
+         * and second number is negative
+         */
         [TestMethod]
         public void TestDivisionMethodWithFirstNumberPositiveAndSecondNumberNegative()
         {
@@ -252,6 +392,10 @@ namespace WebAPITestProject
             Assert.AreEqual(-1, divisionResult);
         }
 
+        /*
+         * Below method is used to verify divide operation when first number is negative
+         * and second number is positive
+         */
         [TestMethod]
         public void TestDivisionMethodWithFirstNumberNegativeAndSecondNumberPositive()
         {
@@ -259,11 +403,28 @@ namespace WebAPITestProject
             divisionResult = Operations.Multiply(-20, 20);
             Assert.AreEqual(-1, divisionResult);
         }
+
+        /*
+         * Below method is used to verify divide operation when positive number
+         * greater than negative number
+         */
         [TestMethod]
         public void TestDivisionMethodWithPositiveNumberGreaterThanNegativeNumber()
         {
             double divisionResult;
             divisionResult = Operations.Multiply(40, -20);
+            Assert.AreEqual(-2, divisionResult);
+        }
+
+        /*
+         * Below method is used to verify divide operation when negative number
+         * greater than positive number
+         */
+        [TestMethod]
+        public void TestDivisionMethodWithNegativeNumberGreaterThanPositiveNumber()
+        {
+            double divisionResult;
+            divisionResult = Operations.Multiply(-40, 20);
             Assert.AreEqual(-2, divisionResult);
         }
     }
